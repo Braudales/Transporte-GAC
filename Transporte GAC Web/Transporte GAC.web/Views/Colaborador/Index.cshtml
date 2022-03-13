@@ -1,0 +1,11 @@
+﻿@model List<Transporte_GAC.web.Models.ColaboradorModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Colaboradores</h2>
+
+@foreach (var colaborador in Model)
+{
+    <p>@colaborador.Id @colaborador.Descripcion</p>
+}
