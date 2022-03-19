@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transporte GAC.web", "Transporte GAC.web\Transporte GAC.web.csproj", "{C8C91025-8840-4DFA-A701-ADAC2B3F5F13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransporteGAC.webadmin", "TransporteGAC.webadmin\TransporteGAC.webadmin.csproj", "{19C324D4-B5B5-4F18-8615-465AFDD02360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransporteGACweb.win", "TransporteGACweb.win\TransporteGACweb.win.csproj", "{9293D297-435E-4BA1-89BE-A5E99330C458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransporteGACweb.BL", "TransporteGACweb.BL\TransporteGACweb.BL.csproj", "{C95602A8-8314-4EDC-AF32-497300213635}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C8C91025-8840-4DFA-A701-ADAC2B3F5F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8C91025-8840-4DFA-A701-ADAC2B3F5F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8C91025-8840-4DFA-A701-ADAC2B3F5F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C324D4-B5B5-4F18-8615-465AFDD02360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C324D4-B5B5-4F18-8615-465AFDD02360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C324D4-B5B5-4F18-8615-465AFDD02360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C324D4-B5B5-4F18-8615-465AFDD02360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9293D297-435E-4BA1-89BE-A5E99330C458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9293D297-435E-4BA1-89BE-A5E99330C458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9293D297-435E-4BA1-89BE-A5E99330C458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9293D297-435E-4BA1-89BE-A5E99330C458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95602A8-8314-4EDC-AF32-497300213635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95602A8-8314-4EDC-AF32-497300213635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95602A8-8314-4EDC-AF32-497300213635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95602A8-8314-4EDC-AF32-497300213635}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

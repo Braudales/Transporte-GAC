@@ -1,11 +1,30 @@
-﻿@model List<Transporte_GAC.web.Models.ColaboradorModel>
+﻿@model List<TransporteGACweb.BL.Colaborador>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Colaboradores</h2>
 
-@foreach (var colaborador in Model)
+<table  class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                Precio
+            </th>
+        </tr>
+    </thead>
+@foreach (var Colaborador in Model)
 {
-    <p>@colaborador.Id @colaborador.Descripcion</p>
+    <tr>
+        <td>@Colaborador.Id</td>
+        <td>@Colaborador.Descripcion</td>
+        <td>@Colaborador.Precio</td>
+    </tr>
 }
+</table>

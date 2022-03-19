@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Transporte_GAC.web.Models
+namespace TransporteGACweb.BL
 {
-    public class ColaboradorModel
+    public class Colaborador
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
+        public double Precio { get; set; }
+        
     }
 }
