@@ -15,18 +15,17 @@ namespace TransporteGACweb.win
     {
         public Form1()
         {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var colaboradorBL = new ColaboradorGACBL();
-            var listacolaboradores = colaboradorBL.ObtenerColaboradores();
-
-            foreach (var Colaborador in listacolaboradores)
             {
-                MessageBox.Show(Colaborador.Descripcion);
+                InitializeComponent();
+                var colaboradorBL = new ColaboradorGACBL();
+                var listacolaboradores = colaboradorBL.ObtenerColaboradores();
+
+                listadeColaboradoresBindingSource.DataSource = listacolaboradores;
             }
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

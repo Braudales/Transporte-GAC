@@ -8,30 +8,42 @@ namespace TransporteGACweb.BL
 {
     public class ColaboradorGACBL
     {
+        Contexto _contexto;
+        public List<Colaborador> ListadeColaboradores { get; set; }
+
+        public ColaboradorGACBL()
+        {
+            _contexto = new Contexto();
+            ListadeColaboradores = new List<Colaborador>();
+        }
         public List<Colaborador> ObtenerColaboradores()
         {
+            ListadeColaboradores = _contexto.Colaborador.ToList();
+            return ListadeColaboradores;
 
-            var colaborador = new Colaborador();
-            colaborador.Id = 1;
-            colaborador.Descripcion = "Mario";
-            colaborador.Precio = 50;
-
-            var colaborador2 = new Colaborador();
-            colaborador2.Id = 2;
-            colaborador2.Descripcion = "Carlos";
-            colaborador2.Precio = 100;
-
-            var colaborador3 = new Colaborador();
-            colaborador3.Id = 3;
-            colaborador3.Descripcion = "Brayan";
-            colaborador3.Precio = 200;
-
-            var listacolaboradores = new List<Colaborador>();
-            listacolaboradores.Add(colaborador);
-            listacolaboradores.Add(colaborador2);
-            listacolaboradores.Add(colaborador3);
-
-            return listacolaboradores;
         }
+        public void GuardarColaborador(Colaborador colaborador)
+        {
+            if (colaborador.Id == 0)
+            {
+                _contexto.Colaborador.Add(colaborador);
+            }
+            else
+            {
+                var colaboradorExistente = _contexto.Colaborador.Find(colaborador.Id);
+                colaboradorExistente.Descripcion = colaborador.Descripcion;
+                colaboradorExistente.Precio = colaborador.Precio;
+            }
+          
+            _contexto.SaveChanges();
+        }
+
+        public Colaborador ObtenerColaborador(int Id)
+        {
+            var colaborador = _contexto.Colaborador.Find(Id);
+
+            return colaborador;
+        }
+        
     }
 }
