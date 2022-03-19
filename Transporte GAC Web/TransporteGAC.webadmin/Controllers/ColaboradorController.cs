@@ -48,5 +48,25 @@ namespace TransporteGAC.webadmin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Detalle(int Id)
+        {
+            var colaborador = _colaboradorBL.ObtenerColaborador(Id);
+            return View(colaborador);
+        }
+
+
+        public ActionResult Eliminar(int Id)
+        {
+            var colaborador = _colaboradorBL.ObtenerColaborador(Id);
+            return View(colaborador);
+        }
+
+        [HttpPost]
+        public ActionResult Eliminar(Colaborador colaborador)
+        {
+            _colaboradorBL.EliminarColaborador(colaborador.Id);
+            return RedirectToAction("Index");
+        }
+
     }
 }

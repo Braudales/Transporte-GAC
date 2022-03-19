@@ -44,6 +44,14 @@ namespace TransporteGACweb.BL
 
             return colaborador;
         }
-        
+
+        public Colaborador EliminarColaborador(int Id)
+        {
+            var colaborador = _contexto.Colaborador.Find(Id);
+            _contexto.Colaborador.Remove(colaborador);
+            _contexto.SaveChanges();
+
+            return colaborador;
+        }
     }
 }

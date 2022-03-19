@@ -166,6 +166,8 @@
     <Content Include="Views\Colaborador\Index.cshtml" />
     <Content Include="Views\Colaborador\Crear.cshtml" />
     <Content Include="Views\Colaborador\Editar.cshtml" />
+    <Content Include="Views\Colaborador\Detalle.cshtml" />
+    <Content Include="Views\Colaborador\Eliminar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
