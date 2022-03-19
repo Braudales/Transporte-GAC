@@ -19,5 +19,6 @@ namespace TransporteGACweb.BL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
         public DbSet<Colaborador> Colaborador { get; set; }
+        public  DbSet<Sucursal> Sucursal { get; set; }
     }
 }
