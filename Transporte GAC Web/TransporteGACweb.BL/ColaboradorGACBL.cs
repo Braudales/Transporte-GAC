@@ -18,7 +18,9 @@ namespace TransporteGACweb.BL
         }
         public List<Colaborador> ObtenerColaboradores()
         {
-            ListadeColaboradores = _contexto.Colaborador.ToList();
+            ListadeColaboradores = _contexto.Colaborador
+                .Include("Sucursal")
+                .ToList();
             return ListadeColaboradores;
 
         }
@@ -32,6 +34,7 @@ namespace TransporteGACweb.BL
             {
                 var colaboradorExistente = _contexto.Colaborador.Find(colaborador.Id);
                 colaboradorExistente.Descripcion = colaborador.Descripcion;
+                colaboradorExistente.SucursalId = colaborador.SucursalId;
                 colaboradorExistente.Precio = colaborador.Precio;
             }
           
@@ -40,7 +43,7 @@ namespace TransporteGACweb.BL
 
         public Colaborador ObtenerColaborador(int Id)
         {
-            var colaborador = _contexto.Colaborador.Find(Id);
+            var colaborador = _contexto.Colaborador.Include("Sucursal").FirstOrDefault(p => p.Id == Id);
 
             return colaborador;
         }

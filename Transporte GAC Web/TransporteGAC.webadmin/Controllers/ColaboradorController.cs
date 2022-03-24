@@ -10,21 +10,28 @@ namespace TransporteGAC.webadmin.Controllers
     public class ColaboradorController : Controller
     {
         ColaboradorGACBL _colaboradorBL;
+        SucursalGACBL _sucursalBL;
 
         public ColaboradorController()
         {
             _colaboradorBL = new ColaboradorGACBL();
+            _sucursalBL = new SucursalGACBL();
         }
         // GET: Colaborador
         public ActionResult Index()
         {
             var ListadeColaboradores = _colaboradorBL.ObtenerColaboradores();
+            
             return View(ListadeColaboradores);
         }
         
         public ActionResult Crear()
         {
             var nuevoColaborador = new Colaborador();
+            var Sucursales = _sucursalBL.Obtenersucursales();
+
+            ViewBag.SucursalId
+                     = new SelectList(Sucursales, "Id", "Nombre");
             return View(nuevoColaborador);
         }
 
@@ -35,11 +42,15 @@ namespace TransporteGAC.webadmin.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Editar(int Id)
+        public ActionResult Editar(int id)
         {
-            var colaborador = _colaboradorBL.ObtenerColaborador(Id);
+            var colaborador = _colaboradorBL.ObtenerColaborador(id);
+            var Sucursales = _sucursalBL.Obtenersucursales();
+           ViewBag.SucursalId = 
+                new SelectList(Sucursales, "Id", "Nombre", colaborador.SucursalId);
             return View(colaborador);
         }
+       
 
         [HttpPost]
         public ActionResult Editar(Colaborador colaborador)
