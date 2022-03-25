@@ -44,17 +44,9 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listadeColaboradoresBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.listadeColaboradoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.listadeColaboradoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listadeColaboradoresBindingNavigator)).BeginInit();
             this.listadeColaboradoresBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeColaboradoresDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // listadeColaboradoresBindingSource
@@ -185,65 +177,11 @@
             this.listadeColaboradoresBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listadeColaboradoresBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
-            // listadeColaboradoresDataGridView
-            // 
-            this.listadeColaboradoresDataGridView.AutoGenerateColumns = false;
-            this.listadeColaboradoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listadeColaboradoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewCheckBoxColumn1});
-            this.listadeColaboradoresDataGridView.DataSource = this.listadeColaboradoresBindingSource;
-            this.listadeColaboradoresDataGridView.Location = new System.Drawing.Point(24, 61);
-            this.listadeColaboradoresDataGridView.Name = "listadeColaboradoresDataGridView";
-            this.listadeColaboradoresDataGridView.Size = new System.Drawing.Size(532, 220);
-            this.listadeColaboradoresDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Sucursal";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Sucursal";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "SucursalId";
-            this.dataGridViewTextBoxColumn5.HeaderText = "SucursalId";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 330);
-            this.Controls.Add(this.listadeColaboradoresDataGridView);
             this.Controls.Add(this.listadeColaboradoresBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -252,7 +190,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeColaboradoresBindingNavigator)).EndInit();
             this.listadeColaboradoresBindingNavigator.ResumeLayout(false);
             this.listadeColaboradoresBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeColaboradoresDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,12 +211,5 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listadeColaboradoresBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView listadeColaboradoresDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }

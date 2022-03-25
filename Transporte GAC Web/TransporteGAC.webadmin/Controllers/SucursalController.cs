@@ -33,8 +33,12 @@ namespace TransporteGAC.webadmin.Controllers
         [HttpPost]
         public ActionResult Crear(Sucursal sucursal)
         {
-            _sucursalBL.GuardarSucursal(sucursal);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _sucursalBL.GuardarSucursal(sucursal);
+                return RedirectToAction("Index");
+            }
+            return View(sucursal);
         }
 
         public ActionResult Editar(int Id)

@@ -33,6 +33,7 @@ namespace TransporteGACweb.BL
             else
             {
                 var colaboradorExistente = _contexto.Colaborador.Find(colaborador.Id);
+                colaboradorExistente.Codigo = colaborador.Codigo;
                 colaboradorExistente.Descripcion = colaborador.Descripcion;
                 colaboradorExistente.SucursalId = colaborador.SucursalId;
                 colaboradorExistente.Precio = colaborador.Precio;
