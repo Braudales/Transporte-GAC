@@ -11,11 +11,12 @@ namespace TransporteGAC.webadmin.Controllers
     {
         ColaboradorGACBL _colaboradorBL;
         SucursalGACBL _sucursalBL;
-
+        TipoBL _tipoBl;
         public ColaboradorController()
         {
             _colaboradorBL = new ColaboradorGACBL();
             _sucursalBL = new SucursalGACBL();
+            _tipoBl = new TipoBL();
         }
         // GET: Colaborador
         public ActionResult Index()
@@ -29,9 +30,12 @@ namespace TransporteGAC.webadmin.Controllers
         {
             var nuevoColaborador = new Colaborador();
             var Sucursales = _sucursalBL.Obtenersucursales();
-
+            var Tipo = _tipoBl.ObtenerTipos();
             ViewBag.SucursalId
                      = new SelectList(Sucursales, "Id", "Nombre");
+            ViewBag.TipoId
+                     = new SelectList(Tipo, "Id", "Departamento");
+
             return View(nuevoColaborador);
         }
 
@@ -46,8 +50,11 @@ namespace TransporteGAC.webadmin.Controllers
         {
             var colaborador = _colaboradorBL.ObtenerColaborador(id);
             var Sucursales = _sucursalBL.Obtenersucursales();
+            var Tipo = _tipoBl.ObtenerTipos();
            ViewBag.SucursalId = 
                 new SelectList(Sucursales, "Id", "Nombre", colaborador.SucursalId);
+            ViewBag.TipoId =
+                new SelectList(Tipo, "Id", "Departamento", colaborador.TipoId);
             return View(colaborador);
         }
        

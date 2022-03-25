@@ -146,6 +146,7 @@
     <Compile Include="Controllers\ColaboradorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SucursalController.cs" />
+    <Compile Include="Controllers\TipoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +175,11 @@
     <Content Include="Views\Sucursal\Editar.cshtml" />
     <Content Include="Views\Sucursal\Eliminar.cshtml" />
     <Content Include="Views\Sucursal\Detalle.cshtml" />
+    <Content Include="Views\Tipo\Index.cshtml" />
+    <Content Include="Views\Tipo\Crear.cshtml" />
+    <Content Include="Views\Tipo\Editar.cshtml" />
+    <Content Include="Views\Tipo\Eliminar.cshtml" />
+    <Content Include="Views\Tipo\Detalle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

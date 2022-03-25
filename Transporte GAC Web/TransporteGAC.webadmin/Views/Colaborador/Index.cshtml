@@ -21,6 +21,10 @@
             @Html.DisplayNameFor(model => model.Sucursal)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+
+        <th>
             @Html.DisplayNameFor(model => model.Precio)
         </th>
         <th>
@@ -39,6 +43,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Sucursal.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo.Departamento)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Precio)

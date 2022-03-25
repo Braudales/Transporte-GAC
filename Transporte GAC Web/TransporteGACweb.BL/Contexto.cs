@@ -20,5 +20,7 @@ namespace TransporteGACweb.BL
         }
         public DbSet<Colaborador> Colaborador { get; set; }
         public  DbSet<Sucursal> Sucursal { get; set; }
+        public DbSet<Tipo> Tipo { get; set; }
+
     }
 }
