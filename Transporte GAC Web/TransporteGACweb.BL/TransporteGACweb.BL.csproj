@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Colaborador.cs" />
+    <Compile Include="Conductor.cs" />
+    <Compile Include="ConductorBL.cs" />
     <Compile Include="SucursalGACBL.cs" />
     <Compile Include="ColaboradorGACBL.cs" />
     <Compile Include="Contexto.cs" />

@@ -86,5 +86,11 @@ namespace TransporteGAC.webadmin.Controllers
             return RedirectToAction("Index");
         }
 
+        private string GuardarImagen(HttpPostedFileBase imagen)
+        {
+            string path = Server.MapPath("~/Imagenes/" + imagen.FileName);
+                imagen.SaveAs(path);
+            return "/ Imagenes / " + imagen.FileName;
+        }
     }
 }
