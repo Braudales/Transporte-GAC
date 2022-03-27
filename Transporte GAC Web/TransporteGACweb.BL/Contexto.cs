@@ -23,6 +23,10 @@ namespace TransporteGACweb.BL
         public DbSet<Tipo> Tipo { get; set; }
         public DbSet<Conductor> Conductor { get; set; }
 
+        public DbSet<Viajes> Viajes { get; set; }
+        public DbSet<ControlViajes> ControlViajes { get; set; }
+
+
 
     }
 }

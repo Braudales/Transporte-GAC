@@ -145,9 +145,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ColaboradorController.cs" />
     <Compile Include="Controllers\ConductorController.cs" />
+    <Compile Include="Controllers\ControldeViajesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SucursalController.cs" />
     <Compile Include="Controllers\TipoController.cs" />
+    <Compile Include="Controllers\ViajesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +188,12 @@
     <Content Include="Views\Conductor\Editar.cshtml" />
     <Content Include="Views\Conductor\Detalle.cshtml" />
     <Content Include="Views\Conductor\Eliminar.cshtml" />
+    <Content Include="Views\Viajes\Index.cshtml" />
+    <Content Include="Views\Viajes\Crear.cshtml" />
+    <Content Include="Views\Viajes\Editar.cshtml" />
+    <Content Include="Views\Viajes\Detalle.cshtml" />
+    <Content Include="Views\ControldeViajes\Index.cshtml" />
+    <Content Include="Views\ControldeViajes\Crear.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

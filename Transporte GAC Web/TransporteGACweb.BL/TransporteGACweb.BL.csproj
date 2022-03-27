@@ -62,6 +62,8 @@
     <Compile Include="Sucursal.cs" />
     <Compile Include="Tipo.cs" />
     <Compile Include="TipoBL.cs" />
+    <Compile Include="Viajes.cs" />
+    <Compile Include="ViajesBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,50 @@
+﻿@model TransporteGACweb.BL.Viajes
+
+@{
+    ViewBag.Title = "Control Viajes";
+}
+
+<h2>Control de Viajes @Model.Id</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Crear", new { id=Model.Id})
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Colaborador
+        </th>
+        <th>
+            cantidad
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Total
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ListadeControlViajes) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Colaborador.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+             |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
