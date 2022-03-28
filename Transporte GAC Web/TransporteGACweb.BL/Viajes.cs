@@ -29,6 +29,7 @@ namespace TransporteGACweb.BL
         public int Id { get; set; }
         public int ViajesId { get; set; }
         public Viajes Viajes { get; set; }
+      
 
         public int ColaboradorId { get; set; }
         public Colaborador Colaborador { get; set; }

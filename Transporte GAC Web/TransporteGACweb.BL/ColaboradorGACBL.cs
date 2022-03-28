@@ -38,6 +38,7 @@ namespace TransporteGACweb.BL
                 colaboradorExistente.Descripcion = colaborador.Descripcion;
                 colaboradorExistente.SucursalId = colaborador.SucursalId;
                 colaboradorExistente.TipoId = colaborador.TipoId;
+                      
                 colaboradorExistente.Precio = colaborador.Precio;
             }
           

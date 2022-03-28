@@ -15,7 +15,7 @@ namespace TransporteGACweb.BL
             Activo = true;
         }
         public int Id { get; set; }
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public Sucursal Sucursal { get; set; }
