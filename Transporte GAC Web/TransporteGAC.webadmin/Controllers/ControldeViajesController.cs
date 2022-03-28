@@ -12,12 +12,13 @@ namespace TransporteGAC.webadmin.Controllers
     {
         ViajesBL _viajesBl;
         ColaboradorGACBL _colaboradorBl;
+        SucursalGACBL _sucursalBL;
        
         public ControldeViajesController()
         {
             _viajesBl = new ViajesBL();
             _colaboradorBl = new ColaboradorGACBL();
-           
+            _sucursalBL = new SucursalGACBL();
         }
 
         // GET: ControldeViajes
@@ -37,8 +38,8 @@ namespace TransporteGAC.webadmin.Controllers
             var colaboradores = _colaboradorBl.ObtenerColaboradores();
             ViewBag.ColaboradorId = new SelectList(colaboradores, "Id","Descripcion");
 
-           // var sucursales = _sucursalGACBl.Obtenersucursales();
-         //   ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
+            var sucursales = _sucursalBL.Obtenersucursales();
+            ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
 
           //  var tipos = _tipoBl.ObtenerTipos();
           //  ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");
@@ -54,7 +55,7 @@ namespace TransporteGAC.webadmin.Controllers
             {
                 if (controlviajes.ColaboradorId == 0)
                 {
-                    ModelState.AddModelError("ColaboradorId", "Selecciones un colaboradore");
+                    ModelState.AddModelError("ColaboradorId", "Selecciones un colaborador");
                     return View(controlviajes);
 
                 }
@@ -64,8 +65,8 @@ namespace TransporteGAC.webadmin.Controllers
             var colaborador = _colaboradorBl.ObtenerColaboradores();
             ViewBag.colaboradorId = new SelectList(colaborador, "Id", "Descripcion");
 
-          //  var sucursales = _sucursalGACBl.Obtenersucursales();
-          //  ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
+            // var sucursales = _sucursalBL.Obtenersucursales();
+            // ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
 
           //  var tipos = _tipoBl.ObtenerTipos();
           //  ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");

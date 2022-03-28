@@ -68,7 +68,7 @@ namespace TransporteGACweb.BL
         public void GuardarControlviajes(ControlViajes controlviajes)
         {
             var colaborador = _contexto.Colaborador.Find(controlviajes.ColaboradorId);
-            //var sucursal = _contexto.Sucursal.Find(controlviajes.SucursalId);
+          //  var sucursal = _contexto.Sucursal.Find(controlviajes.SucursalId);
            // var tipo = _contexto.Tipo.Find(controlviajes.TipoId);
             controlviajes.Precio = colaborador.Precio;
             controlviajes.Total = controlviajes.cantidad * controlviajes.Precio;

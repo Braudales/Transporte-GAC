@@ -33,6 +33,8 @@ namespace TransporteGACweb.BL
 
         public int ColaboradorId { get; set; }
         public Colaborador Colaborador { get; set; }
+      //  public int SucursalId { get; set; }
+      //  public Sucursal Sucursal { get; set; }
 
         public int cantidad { get; set; }
         public double Precio { get; set; }
