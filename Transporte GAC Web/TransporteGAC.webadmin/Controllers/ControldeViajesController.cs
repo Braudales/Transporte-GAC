@@ -65,8 +65,8 @@ namespace TransporteGAC.webadmin.Controllers
             var colaborador = _colaboradorBl.ObtenerColaboradores();
             ViewBag.colaboradorId = new SelectList(colaborador, "Id", "Descripcion");
 
-            // var sucursales = _sucursalBL.Obtenersucursales();
-            // ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
+            var sucursales = _sucursalBL.Obtenersucursales();
+            ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
 
           //  var tipos = _tipoBl.ObtenerTipos();
           //  ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");

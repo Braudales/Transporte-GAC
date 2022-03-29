@@ -27,7 +27,7 @@ namespace TransporteGACweb.BL
 
         public List<ControlViajes> ObtenerControldeviajes(int viajeId)
         {
-            var ListadeControldeviajes = _contexto.ControlViajes.Include("Colaborador").
+            var ListadeControldeviajes = _contexto.ControlViajes.Include("Colaborador").Include("Sucursal").
                    Where(o => o.ViajesId== viajeId ).
                  ToList();
             return ListadeControldeviajes;
@@ -68,8 +68,8 @@ namespace TransporteGACweb.BL
         public void GuardarControlviajes(ControlViajes controlviajes)
         {
             var colaborador = _contexto.Colaborador.Find(controlviajes.ColaboradorId);
-          //  var sucursal = _contexto.Sucursal.Find(controlviajes.SucursalId);
-           // var tipo = _contexto.Tipo.Find(controlviajes.TipoId);
+            colaborador.SucursalId = colaborador.SucursalId;
+            // var tipo = _contexto.Tipo.Find(controlviajes.TipoId);
             controlviajes.Precio = colaborador.Precio;
             controlviajes.Total = controlviajes.cantidad * controlviajes.Precio;
             _contexto.ControlViajes.Add(controlviajes);
