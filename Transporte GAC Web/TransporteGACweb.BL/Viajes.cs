@@ -37,6 +37,8 @@ namespace TransporteGACweb.BL
         
         public Sucursal Sucursal { get; set; }
 
+        public Tipo Tipo { get; set; }
+
         public int cantidad { get; set; }
         public double Precio { get; set; }
         public double Total { get; set; }

@@ -18,6 +18,9 @@
            Sucursal
         </th>
         <th>
+            Tipo
+        </th>
+        <th>
             cantidad
         </th>
         <th>
@@ -37,6 +40,10 @@
        
         <td>
             @Html.DisplayFor(modelItem => item.Sucursal.Nombre)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo.Departamento)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.cantidad)

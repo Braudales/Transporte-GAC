@@ -13,12 +13,14 @@ namespace TransporteGAC.webadmin.Controllers
         ViajesBL _viajesBl;
         ColaboradorGACBL _colaboradorBl;
         SucursalGACBL _sucursalBL;
+        TipoBL _Tiposbl;
        
         public ControldeViajesController()
         {
             _viajesBl = new ViajesBL();
             _colaboradorBl = new ColaboradorGACBL();
             _sucursalBL = new SucursalGACBL();
+            _Tiposbl = new TipoBL();
         }
 
         // GET: ControldeViajes
@@ -41,8 +43,8 @@ namespace TransporteGAC.webadmin.Controllers
             var sucursales = _sucursalBL.Obtenersucursales();
             ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
 
-          //  var tipos = _tipoBl.ObtenerTipos();
-          //  ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");
+            var tipos = _Tiposbl.ObtenerTipos();
+            ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");
 
             //
             return View(nuevocontrolviaje);
@@ -68,8 +70,8 @@ namespace TransporteGAC.webadmin.Controllers
             var sucursales = _sucursalBL.Obtenersucursales();
             ViewBag.SucursalId = new SelectList(sucursales, "Id", "Nombre");
 
-          //  var tipos = _tipoBl.ObtenerTipos();
-          //  ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");
+             var tipos = _Tiposbl.ObtenerTipos();
+            ViewBag.TipoId = new SelectList(tipos, "Id", "Departamento");
             return View(controlviajes);
 
         }
